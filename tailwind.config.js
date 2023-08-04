@@ -12,12 +12,16 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
-    fontFamily: {
-      lauren: ["Lauren", "cursive"],
-      arabella: ["Arabella", "cursive"],
-      julius: ["JuliusSansOne", "sans"],
-    },
+      colors: {
+        accent: "hsl(190, 54%, 56%)",
+        darkAccent: "hsl(190, 15%, 58%)"
+      },
+      fontFamily: {
+        lauren: ["Lauren", "cursive"],
+        arabella: ["Arabella", "cursive"],
+        julius: ["JuliusSansOne", "sans"],
+      }
+    }
   },
   plugins: [],
 }
