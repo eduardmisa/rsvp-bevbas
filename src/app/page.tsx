@@ -23,7 +23,7 @@ export default function Home() {
           </h1>
           <hr/>
           <h3 className="text-center font-arabella text-4xl text-[#90cbc9]">
-            We're Saying &apos;&apos;I DO&apos;&apos;
+            We&apos;re Saying &apos;&apos;I DO&apos;&apos;
           </h3>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLScQrRK2RTfE0M8jE7PMrsm7e2xU_CMJ19n23B70H-7CO4CGIw/viewform?fbclid=IwAR2-NCoK8kRXWCXUhhwOJ9npmIR3EyxT_rYbu600kKbCrxoYSAbbTZK_gGg"
