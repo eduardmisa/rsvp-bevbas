@@ -23,7 +23,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen min-w-screen max-h-screen max-w-screen">
       {/* LANDSCAPE */}
       <div className="min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
-        <Carousel autoPlay={true} className="block m-auto">
+        <Carousel autoFocus autoPlay useKeyboardArrows dynamicHeight className="">
           <div>
             <Image
                 src="/pictures/processed/landscape/car1.jpg"
@@ -74,12 +74,12 @@ export default function Home() {
                 className="w-full"
             />
           </div>
-        </Carousel>
+        </Carousel >
       </div>
 
       {/* PORTRAIT */}
       <div className="min-h-screen min-w-screen max-h-screen max-w-screen hidden md:flex">
-        <Carousel showArrows={true} autoPlay={true} className="block m-auto">
+        <Carousel autoFocus autoPlay useKeyboardArrows dynamicHeight className="">
           <div>
             <Image
                 src="/pictures/processed/portrait/car1.jpg"
