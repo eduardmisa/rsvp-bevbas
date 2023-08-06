@@ -24,7 +24,7 @@ export default function Home() {
     <main className="flex flex-col min-h-screen min-w-screen max-h-screen max-w-screen">
       {/* LANDSCAPE */}
       <div className="relative min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
-        <Carousel autoPlay={true} className="block m-auto h-[100px]">
+        <Carousel autoPlay={true} className="block m-auto">
           <div>
             <Image
                 src="/pictures/processed/landscape/car1.jpg"
