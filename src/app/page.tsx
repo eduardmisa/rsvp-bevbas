@@ -3,16 +3,32 @@ import Image from 'next/image'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { useRouter } from 'next/navigation';
+import useSound from 'use-sound';
+import {useState} from "react";
 
 export default function Home() {
   const rvspLink = "https://docs.google.com/forms/d/e/1FAIpQLScQrRK2RTfE0M8jE7PMrsm7e2xU_CMJ19n23B70H-7CO4CGIw/viewform?fbclid=IwAR2-NCoK8kRXWCXUhhwOJ9npmIR3EyxT_rYbu600kKbCrxoYSAbbTZK_gGg";
   const { push } = useRouter();
 
+  const [isPLaying, setIsPLaying] = useState(false);
+  const [ play, soundEnabled ] = useSound(
+      "sounds/soundtrack.mp3",
+      {
+        volume: 0.75
+      }
+  );
+
+  window.onclick = () => {
+    if (isPLaying) return;
+    void play();
+    setIsPLaying(true);
+  }
+
   return (
     <main className="flex flex-col min-h-screen min-w-screen max-h-screen max-w-screen">
       {/* LANDSCAPE */}
-      <div className="min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
-        <Carousel autoPlay={true} className="block m-auto">
+      <div className="relative min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
+        <Carousel autoPlay={true} className="block m-auto h-[100px]">
           <div>
             <Image
                 src="/pictures/processed/landscape/car1.jpg"
