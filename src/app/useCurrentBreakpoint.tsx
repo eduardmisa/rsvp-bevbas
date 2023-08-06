@@ -1,7 +1,8 @@
+"use client"
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../tailwind.config'; // Fix the path
 
-const fullConfig = resolveConfig(tailwindConfig);
+const fullConfig: any = resolveConfig(tailwindConfig);
 
 export const getBreakpointValue = (value: string): number =>
     +fullConfig.theme.screens[value].slice(
@@ -9,8 +10,8 @@ export const getBreakpointValue = (value: string): number =>
         fullConfig.theme.screens[value].indexOf('px')
     );
 
-export const getCurrentBreakpoint = (): string => {
-  let currentBreakpoint: string;
+export const getCurrentBreakpoint = (window: any): string => {
+  let currentBreakpoint: string = "";
   let biggestBreakpointValue = 0;
   for (const breakpoint of Object.keys(fullConfig.theme.screens)) {
     const breakpointValue = getBreakpointValue(breakpoint);
