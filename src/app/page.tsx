@@ -10,7 +10,6 @@ export default function Home() {
   const rvspLink = "https://docs.google.com/forms/d/e/1FAIpQLScQrRK2RTfE0M8jE7PMrsm7e2xU_CMJ19n23B70H-7CO4CGIw/viewform?fbclid=IwAR2-NCoK8kRXWCXUhhwOJ9npmIR3EyxT_rYbu600kKbCrxoYSAbbTZK_gGg";
   const { push } = useRouter();
 
-  const [isPLaying, setIsPLaying] = useState(false);
   const [ play, soundEnabled ] = useSound(
       "sounds/soundtrack.mp3",
       {
@@ -23,7 +22,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen min-w-screen max-h-screen max-w-screen">
       {/* LANDSCAPE */}
-      <div className="relative min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
+      <div className="min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
         <Carousel autoPlay={true} className="block m-auto">
           <div>
             <Image
