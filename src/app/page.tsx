@@ -1,10 +1,10 @@
 "use client"
 import Image from 'next/image'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import { useRouter } from 'next/navigation';
 import useSound from 'use-sound';
-import {useEffect, useRef, useState} from "react";
+import ReactFullpage from '@fullpage/react-fullpage';
+import { useRouter } from 'next/navigation';
+import { getCurrentBreakpoint } from "@/app/useCurrentBreakpoint";
+import { useMemo } from "react";
 
 export default function Home() {
   const rvspLink = "https://docs.google.com/forms/d/e/1FAIpQLScQrRK2RTfE0M8jE7PMrsm7e2xU_CMJ19n23B70H-7CO4CGIw/viewform?fbclid=IwAR2-NCoK8kRXWCXUhhwOJ9npmIR3EyxT_rYbu600kKbCrxoYSAbbTZK_gGg";
@@ -19,119 +19,104 @@ export default function Home() {
 
   void play();
 
+  const currentBreakpoint = useMemo(() => {
+    return getCurrentBreakpoint();
+  }, [])
+
+  const mobileFullpages = [
+    {
+      src: "/pictures/processed/mobile/car1.jpg"
+    },
+    {
+      src: "/pictures/processed/mobile/car2.jpg"
+    },
+    {
+      src: "/pictures/processed/mobile/car3.jpg"
+    },
+    {
+      src: "/pictures/processed/mobile/car4.jpg"
+    },
+    {
+      src: "/pictures/processed/mobile/car5.jpg"
+    }
+  ]
+  const desktopFullpages = [
+    {
+      src: "/pictures/processed/desktop/car1.jpg"
+    },
+    {
+      src: "/pictures/processed/desktop/car2.jpg"
+    },
+    {
+      src: "/pictures/processed/desktop/car3.jpg"
+    },
+    {
+      src: "/pictures/processed/desktop/car4.jpg"
+    },
+    {
+      src: "/pictures/processed/desktop/car5.jpg"
+    }
+  ]
+  const isLastItem = (src: string) => {
+    return src.endsWith("5.jpg")
+  }
+
   return (
     <main className="flex flex-col min-h-screen min-w-screen max-h-screen max-w-screen">
-      {/* LANDSCAPE */}
-      <div className="min-h-screen min-w-screen max-h-screen max-w-screen flex md:hidden">
-        <Carousel autoFocus autoPlay useKeyboardArrows dynamicHeight className="">
-          <div>
-            <Image
-                src="/pictures/processed/landscape/car1.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
+      {currentBreakpoint === "sm" && (
+          <div className="block md:hidden">
+            <ReactFullpage
+                key={"MOBILE"}
+                navigation
+                loopBottom
+                render={comp =>
+                    console.log("render prop change") || (
+                        <ReactFullpage.Wrapper>
+                          {mobileFullpages.map(({ src }) => (
+                              <div key={src} className="section items-center">
+                                <Image
+                                    src={src}
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    alt="Nothing"
+                                    className="w-screen max-h-screen"
+                                />
+                              </div>
+                          ))}
+                        </ReactFullpage.Wrapper>
+                    )
+                }
             />
           </div>
-          <div>
-            <Image
-                src="/pictures/processed/landscape/car2.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
+      )}
+      {currentBreakpoint !== "sm" && (
+          <div className="hidden md:block">
+            <ReactFullpage
+                key={"DESKTOP"}
+                navigation
+                loopBottom
+                render={comp =>
+                    console.log("render prop change") || (
+                        <ReactFullpage.Wrapper>
+                          {desktopFullpages.map(({ src }) => (
+                              <div key={src} className="section items-center" onClick={() => isLastItem(src) ? push(rvspLink) : undefined}>
+                                <Image
+                                    src={src}
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    alt="Nothing"
+                                    className="w-screen max-h-screen"
+                                />
+                              </div>
+                          ))}
+                        </ReactFullpage.Wrapper>
+                    )
+                }
             />
           </div>
-          <div>
-            <Image
-                src="/pictures/processed/landscape/car3.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-          <div>
-            <Image
-                src="/pictures/processed/landscape/car4.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-          <div className={"cursor-pointer"} onClick={() => push(rvspLink)}>
-            <Image
-                src="/pictures/processed/landscape/car5.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-        </Carousel >
-      </div>
-
-      {/* PORTRAIT */}
-      <div className="min-h-screen min-w-screen max-h-screen max-w-screen hidden md:flex">
-        <Carousel autoFocus autoPlay useKeyboardArrows dynamicHeight className="">
-          <div>
-            <Image
-                src="/pictures/processed/portrait/car1.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-          <div>
-            <Image
-                src="/pictures/processed/portrait/car2.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-          <div>
-            <Image
-                src="/pictures/processed/portrait/car3.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-          <div>
-            <Image
-                src="/pictures/processed/portrait/car4.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-          <div className={"cursor-pointer"} onClick={() => push(rvspLink)}>
-            <Image
-                src="/pictures/processed/portrait/car5.jpg"
-                width={0}
-                height={0}
-                sizes="100%"
-                alt="Nothing"
-                className="w-full"
-            />
-          </div>
-        </Carousel>
-      </div>
+      )}
     </main>
   )
 }
