@@ -68,6 +68,7 @@ export default function Home() {
             <ReactFullpage
                 key={"MOBILE"}
                 navigation
+                autoScrolling
                 loopBottom
                 render={comp =>
                     console.log("render prop change") || (
@@ -95,6 +96,7 @@ export default function Home() {
             <ReactFullpage
                 key={"DESKTOP"}
                 navigation
+                autoScrolling
                 loopBottom
                 render={comp =>
                     console.log("render prop change") || (
