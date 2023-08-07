@@ -24,7 +24,7 @@ export const First = () => {
         <div className="absolute flex flex-col lg:flex-row z-30 w-full bg-transparent bottom-0 px-24 pb-28 gap-x-16 font-forum">
           <div className="m-auto">
             <h4 className="text-center m-auto lg:text-3xl leading-normal">September 30, 2023</h4>
-            <h4 className="text-center m-auto lg:text-3xl leading-normal">at 10:100 AM</h4>
+            <h4 className="text-center m-auto lg:text-3xl leading-normal">at 09:30 AM</h4>
           </div>
           <div className="m-auto mt-4 md:mt-0">
             <h4 className="text-center m-auto lg:text-3xl leading-normal">Parish of the Immaculate Heart of Mary Daang Bakal Rd, Antipolo, 1870 Rizal</h4>
