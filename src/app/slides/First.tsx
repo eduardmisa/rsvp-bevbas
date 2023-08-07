@@ -27,7 +27,7 @@ export const First = () => {
             <h4 className="text-center m-auto lg:text-3xl leading-normal">at 09:30 AM</h4>
           </div>
           <div className="m-auto mt-4 md:mt-0">
-            <h4 className="text-center m-auto lg:text-3xl leading-normal">Parish of the Immaculate Heart of Mary Daang Bakal Rd, Antipolo, 1870 Rizal</h4>
+            <h4 className="text-center m-auto lg:text-3xl leading-normal">Parish of the Immaculate Heart of Mary Daang <br/>Bakal Rd, Antipolo, 1870 Rizal</h4>
           </div>
         </div>
       </div>

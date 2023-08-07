@@ -27,10 +27,10 @@ export const Fifth = () => {
           <div className="lg:hidden absolute bg-white opacity-80 z-10 w-full h-full"></div>
         </div>
         <div className="flex flex-col absolute lg:relative w-full lg:w-[30%] p-10 mt-56 lg:mt-0 h-full font-seasons z-20">
-          <h2 className="text-2xl lg:text-3xl">We kindly request for your response by September 9, 2023.</h2>
-          <h2 className="text-2xl lg:text-3xl">Cheers!</h2>
+          <h2 className="text-xl lg:text-3xl">We kindly request for your response by September 9, 2023.</h2>
+          <h2 className="text-xl lg:text-3xl">Cheers!</h2>
 
-          <h2 className="text-2xl lg:text-3xl mt-4">
+          <h2 className="text-xl lg:text-3xl mt-4">
             Send a message to:<br/>
             Beverly Sarza | 0909-293-9132<br/>
             Christian Bascuña | 0995-114-2292
