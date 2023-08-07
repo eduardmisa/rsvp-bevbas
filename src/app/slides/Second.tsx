@@ -17,7 +17,7 @@
             </div>
             <div className="flex flex-col relative lg:w-[50%] lg:p-16 lg:pl-5 h-full">
               <Image
-                  src="/pictures/AMP_1072.2.jpg"
+                  src="/pictures/AMP_1072.3.jpg"
                   width={0}
                   height={0}
                   sizes="100%"
