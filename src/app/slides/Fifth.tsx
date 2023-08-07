@@ -21,17 +21,17 @@ export const Fifth = () => {
               alt="Nothing"
               className="w-full h-full object-cover object-rigth md:hidden"
           />
-          <h2 className="absolute text-5xl font-seasons p-10 lg:w-[75%] leading-tight z-20">
+          <h2 className="absolute text-4xl font-seasons p-10 lg:w-[75%] leading-tight z-20">
             We hope to see you from the altar.
           </h2>
           <div className="lg:hidden absolute bg-white opacity-80 z-10 w-full h-full"></div>
         </div>
-        <div className="flex flex-col absolute lg:relative w-full lg:w-[30%] p-10 mt-96 lg:mt-0 h-full font-seasons z-20">
-          <h2 className="text-2xl lg:text-3xl">We kindly request your response by August 25, 2023.</h2>
-          <h2 className="text-2xl lg:text-3xl">Cheers.</h2>
+        <div className="flex flex-col absolute lg:relative w-full lg:w-[30%] p-10 mt-56 lg:mt-0 h-full font-seasons z-20">
+          <h2 className="text-2xl lg:text-3xl">We kindly request for your response by September 9, 2023.</h2>
+          <h2 className="text-2xl lg:text-3xl">Cheers!</h2>
 
-          <h2 className="text-2xl lg:text-3xl mt-10">
-            Send a message to<br/>
+          <h2 className="text-2xl lg:text-3xl mt-4">
+            Send a message to:<br/>
             Beverly Sarza | 0909-293-9132<br/>
             Christian Bascuña | 0995-114-2292
           </h2>
