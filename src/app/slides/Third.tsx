@@ -19,23 +19,21 @@ export const Third = () => {
                 <span className="block underline decoration-1 underline-offset-4">
                   Principal Sponsors
                 </span>
-                    <span className="block">
+                <span className="block">
                   Gentlemen | Suit and Tie <br/>
                   Ladies | Formal Dress <br/>
                 </span>
-                    <span className="block underline decoration-1 underline-offset-4">
+                <span className="block underline decoration-1 underline-offset-4">
                   Guests
                 </span>
-                    <span className="block">
+                <span className="block">
                   Gentlemen | Polo and Pants <br/>
                   Ladies | Long dress, Cocktail dress, Semi formal or Dressy Casual
                 </span>
-                    <br/>
-                    <span className="block">
+                <span className="block">
                   Please avoid wearing sandos, t-shirts, shorts & slippers
                 </span>
-                    <br/>
-                    <span className="flex flex-col">
+                <span className="flex flex-col">
                   Guests are encouraged to wear attire with any of these colors.
                   <div className="flex gap-x-2 mx-auto mt-2">
                     <span className="block w-5 h-5 bg-[#FFC0CB]"></span>
