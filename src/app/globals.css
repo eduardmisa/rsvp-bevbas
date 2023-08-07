@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Lauren";
-    src: url("/fonts/Lauren-Regular.ttf");
+    font-family: "TheSeasonsLight";
+    src: url("/fonts/TheSeasons-Light.ttf");
 }
 @font-face {
-    font-family: "Arabella";
-    src: url("/fonts/Arabella.ttf");
-}
-@font-face {
-    font-family: "JuliusSansOne";
-    src: url("/fonts/JuliusSansOne-Regular.ttf");
+    font-family: "ForumRegular";
+    src: url("/fonts/Forum-Regular.ttf");
 }
 
 body {
     overflow: hidden;
+}
+
+.fp-watermark {
+    display: none!important;
 }
 
 /*:root {*/

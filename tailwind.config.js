@@ -20,6 +20,8 @@ module.exports = {
         lauren: ["Lauren", "cursive"],
         arabella: ["Arabella", "cursive"],
         julius: ["JuliusSansOne", "sans"],
+        seasons: ["TheSeasonsLight", "sans"],
+        forum: ["ForumRegular", "sans"],
       }
     }
   },

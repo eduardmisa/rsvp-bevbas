@@ -1,15 +1,15 @@
 "use client"
-import Image from 'next/image'
 import useSound from 'use-sound';
 import ReactFullpage from '@fullpage/react-fullpage';
-import { useRouter } from 'next/navigation';
 import { getCurrentBreakpoint } from "@/app/useCurrentBreakpoint";
 import {useEffect, useMemo, useState} from "react";
+import {First} from "@/app/slides/First";
+import {Second} from "@/app/slides/Second";
+import {Third} from "@/app/slides/Third";
+import {Fourth} from "@/app/slides/Fourth";
+import {Fifth} from "@/app/slides/Fifth";
 
 export default function Home() {
-  const rvspLink = "https://docs.google.com/forms/d/e/1FAIpQLScQrRK2RTfE0M8jE7PMrsm7e2xU_CMJ19n23B70H-7CO4CGIw/viewform?fbclid=IwAR2-NCoK8kRXWCXUhhwOJ9npmIR3EyxT_rYbu600kKbCrxoYSAbbTZK_gGg";
-  const { push } = useRouter();
-
   const [ play, soundEnabled ] = useSound(
       "sounds/soundtrack.mp3",
       {
@@ -24,106 +24,41 @@ export default function Home() {
     setCurrentBreakpoint(getCurrentBreakpoint(window));
   }, [])
 
-  const mobileFullpages = [
-    {
-      src: "/pictures/processed/mobile/car1.jpg"
-    },
-    {
-      src: "/pictures/processed/mobile/car2.jpg"
-    },
-    {
-      src: "/pictures/processed/mobile/car3.jpg"
-    },
-    {
-      src: "/pictures/processed/mobile/car4.jpg"
-    },
-    {
-      src: "/pictures/processed/mobile/car5.jpg"
-    }
-  ]
-  const desktopFullpages = [
-    {
-      src: "/pictures/processed/desktop/car1.jpg"
-    },
-    {
-      src: "/pictures/processed/desktop/car2.jpg"
-    },
-    {
-      src: "/pictures/processed/desktop/car3.jpg"
-    },
-    {
-      src: "/pictures/processed/desktop/car4.jpg"
-    },
-    {
-      src: "/pictures/processed/desktop/car5.jpg"
-    }
-  ]
   const isLastItem = (src: string) => {
     return src.endsWith("5.jpg")
   }
 
   return (
     <main className="flex flex-col min-h-screen min-w-screen max-h-screen max-w-screen">
-      {currentBreakpoint === "sm" && (
-          <div className="block md:hidden">
-            <ReactFullpage
-                key={"MOBILE"}
-                credits={{
-                  enabled: true,
-                  position: "right"
-                }}
-                navigation
-                autoScrolling
-                loopBottom
-                render={comp => (
-                    <ReactFullpage.Wrapper>
-                      {mobileFullpages.map(({ src }) => (
-                          <div key={src} className="section items-center">
-                            <Image
-                                src={src}
-                                width={0}
-                                height={0}
-                                sizes="100%"
-                                alt="Nothing"
-                                className="w-screen max-h-screen"
-                            />
-                          </div>
-                      ))}
-                    </ReactFullpage.Wrapper>
-                )}
-            />
-          </div>
-      )}
-      {currentBreakpoint !== "sm" && (
-          <div className="hidden md:block">
-            <ReactFullpage
-                key={"DESKTOP"}
-                credits={{
-                  enabled: true,
-                  position: "right"
-                }}
-                navigation
-                autoScrolling
-                loopBottom
-                render={comp => (
-                    <ReactFullpage.Wrapper>
-                      {desktopFullpages.map(({ src }) => (
-                          <div key={src} className="section items-center" onClick={() => isLastItem(src) ? push(rvspLink) : undefined}>
-                            <Image
-                                src={src}
-                                width={0}
-                                height={0}
-                                sizes="100%"
-                                alt="Nothing"
-                                className="w-screen max-h-screen"
-                            />
-                          </div>
-                      ))}
-                    </ReactFullpage.Wrapper>
-                )}
-            />
-          </div>
-      )}
+      <ReactFullpage
+          key={"MOBILE"}
+          credits={{
+            enabled: true,
+            position: "right"
+          }}
+          navigation
+          autoScrolling={true}
+          loopBottom
+          render={comp => (
+              <ReactFullpage.Wrapper>
+                <div className="section">
+                  <First />
+                </div>
+                <div className="section">
+                  <Second />
+                </div>
+                <div className="section">
+                  <Third />
+                </div>
+                <div className="section">
+                  <Fourth />
+                </div>
+                <div className="section">
+                  <Fifth />
+                </div>
+              </ReactFullpage.Wrapper>
+          )}
+      />
     </main>
   )
 }
