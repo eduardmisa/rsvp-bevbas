@@ -4,7 +4,7 @@ export const Third = () => {
 
   return (
       <div className="flex items-center w-screen h-screen bg-[#FFFBF7]">
-        <div className="flex flex-col absolute lg:relative h-full p-0 lg:w-[40%] lg:p-16 lg:pl-5 z-50 font-forum p-20 ">
+        <div className="flex flex-col absolute lg:relative h-full justify-center p-0 w-full lg:w-[40%] lg:p-16 lg:pl-5 z-50 font-forum p-20">
           <h2 className="text-3xl text-center">VENUE:</h2>
           <h3 className="text-center text-lg">
             The Chandelier <br/>
