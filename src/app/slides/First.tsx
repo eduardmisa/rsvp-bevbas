@@ -17,7 +17,7 @@ export const First = () => {
           <div className="m-auto">
             <div className="m-auto">
               <h1 className="text-center m-auto text-3xl md:text-7xl font-seasons tracking-[0.7rem]">CHRISTIAN & BEVERLY</h1>
-              <h3 className="text-center m-auto text-xl md:text-4xl font-forum mt-3">We're Saying " I Do "</h3>
+              <h3 className="text-center m-auto text-xl md:text-4xl font-forum mt-3">We&lsquo;re Saying &lsquo;&lsquo; I Do &lsquo;&lsquo;</h3>
             </div>
           </div>
         </div>
