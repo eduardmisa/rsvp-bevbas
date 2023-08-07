@@ -36,7 +36,7 @@ export default function Home() {
             enabled: true,
             position: "right"
           }}
-          navigation
+          navigation={false}
           autoScrolling={true}
           loopBottom
           render={comp => (
