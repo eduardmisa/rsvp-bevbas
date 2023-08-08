@@ -21,7 +21,7 @@ export const First = () => {
             </div>
             <div className="font-forum md:hidden mt-10">
               <div className="m-auto">
-                <h4 className="text-center m-auto lg:text-3xl leading-normal">September 30, 2023 12312</h4>
+                <h4 className="text-center m-auto lg:text-3xl leading-normal">September 30, 2023</h4>
                 <h4 className="text-center m-auto lg:text-3xl leading-normal">at 09:30 AM</h4>
               </div>
               <div className="m-auto mt-4 md:mt-0">
