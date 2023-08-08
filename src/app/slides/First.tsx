@@ -19,9 +19,18 @@ export const First = () => {
               <h1 className="block text-center m-auto text-3xl lg:text-7xl font-seasons tracking-[0.7rem] break-keep">CHRISTIAN <span className="block lg:inline">&</span> BEVERLY</h1>
               <h3 className="text-center m-auto text-xl lg:text-4xl font-forum mt-3">We&rsquo;re Saying &ldquo; I Do &rdquo;</h3>
             </div>
+            <div className="font-forum md:hidden mt-10">
+              <div className="m-auto">
+                <h4 className="text-center m-auto lg:text-3xl leading-normal">September 30, 2023 12312</h4>
+                <h4 className="text-center m-auto lg:text-3xl leading-normal">at 09:30 AM</h4>
+              </div>
+              <div className="m-auto mt-4 md:mt-0">
+                <h4 className="text-center m-auto lg:text-3xl leading-normal">Parish of the Immaculate Heart of Mary <br/>Daang Bakal Rd, Antipolo, 1870 Rizal</h4>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="absolute flex flex-col lg:flex-row z-30 w-full bg-transparent bottom-0 px-24 pb-28 gap-x-16 font-forum">
+        <div className="hidden md:flex absolute flex-col lg:flex-row z-30 w-full bg-transparent bottom-0 px-24 pb-28 gap-x-16 font-forum">
           <div className="m-auto">
             <h4 className="text-center m-auto lg:text-3xl leading-normal">September 30, 2023</h4>
             <h4 className="text-center m-auto lg:text-3xl leading-normal">at 09:30 AM</h4>
