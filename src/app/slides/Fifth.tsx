@@ -36,7 +36,11 @@ export const Fifth = () => {
             Christian Bascuña | 0995-114-2292
           </h2>
 
-          <a href={rvspLink} className="mt-10 block w-fit border-2 border-solid border-black py-2 px-10 text-lg hover:bg-black hover:text-white underline">
+          <h2 className="text-xl lg:text-3xl mt-10">
+            Click the Button below to respond
+          </h2>
+
+          <a href={rvspLink} className="mt-2 block w-fit border-2 border-solid border-2 border-black py-6 px-16 text-3xl font-semibold hover:bg-black hover:text-white underline">
             RSVP NOW
           </a>
         </div>
