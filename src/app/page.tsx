@@ -24,7 +24,7 @@ export default function Home() {
     if (fullpageApi && !isFullpageApiMounted) {
       setInterval(() => {
         fullpageApi?.fullpageApi.moveSectionDown();
-      }, 3000);
+      }, 10000);
       setIsFullpageApiMounted(true)
     }
   }, [fullpageApi])
